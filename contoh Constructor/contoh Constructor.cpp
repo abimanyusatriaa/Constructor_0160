@@ -8,21 +8,17 @@ private:
     int nim;
     string nama;
 public:
-    mahasiswa();
-    mahasiswa(int);
+    mahasiswa() {
+        nim = 0;
+        nama = "";
+    }
+    mahasiswa(int iNim) {
+        nim = iNim;
+    }
     mahasiswa(string);
     mahasiswa(int iNim, string iNama);
     void cetak();
 };
-
-mahasiswa::mahasiswa() {
-    nim = 0;
-    nama = "";
-}
-
-mahasiswa::mahasiswa(int iNim) {
-    nim = iNim;
-}
 
 mahasiswa::mahasiswa(string iNama) {
     nim = 0;
@@ -39,8 +35,18 @@ void mahasiswa::cetak() {
     cout << " Nama = " << nama << endl;
 }
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    mahasiswa mhs1("fatur");
+    mahasiswa mhs2("satria");
+    mahasiswa mhs3("tapir");
+    mahasiswa mhs4("kecil");
+
+    mhs1.cetak();
+    mhs2.cetak();
+    mhs3.cetak();
+    mhs4.cetak();
+
+    system("pause");
+    return 0;
 }
 
