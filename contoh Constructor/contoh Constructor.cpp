@@ -36,10 +36,10 @@ void mahasiswa::cetak() {
 }
 
 int main() {
-    mahasiswa mhs1("fatur");
-    mahasiswa mhs2("satria");
+    mahasiswa mhs1;
+    mahasiswa mhs2(23);
     mahasiswa mhs3("tapir");
-    mahasiswa mhs4("kecil");
+    mahasiswa mhs4(33, "kecil");
 
     mhs1.cetak();
     mhs2.cetak();
