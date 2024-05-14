@@ -16,8 +16,31 @@ public:
     }
 };
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int Mahasiswa::nim = 160;
+
+void Mahasiswa::setID() {
+    id = ++nim;
 }
 
+void Mahasiswa::printALL() {
+    cout << "ID   = " << id << endl;
+    cout << "Nama = " << nama << endl;
+    cout << endl;
+}
+
+int main() {
+
+    Mahasiswa mhs1("Lia Kurnia");
+    Mahasiswa mhs2("Asroni");
+    Mahasiswa mhs3("Andi Kurniawan");
+    Mahasiswa mhs4("Joko Purbo");
+
+    mhs1.printALL();
+    mhs2.printALL();
+    mhs3.printALL();
+    mhs4.printALL();
+
+    system("pause");
+
+    return 0;
+}
